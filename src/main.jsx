@@ -5,14 +5,17 @@ import "flowbite";
 
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
+import { ProductProvider } from "./contect/ProductContext.jsx";
 
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
     
+   <ProductProvider>
 
       <App />
+   </ProductProvider>
   
     </BrowserRouter>
   </StrictMode>

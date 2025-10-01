@@ -2,81 +2,91 @@ import React from 'react'
 
 const contect = () => {
   return (
-    <div>
-         <div className="bg-gray-50 min-h-screen flex flex-col">
-      {/* Navbar */}
     
+ <div className="bg-gray-50 min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-black text-white py-16 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
+        <p className="text-lg md:text-xl max-w-2xl mx-auto">
+          Have questions about our products or need support? We're here to help.
+        </p>
+      </section>
 
-      {/* Contact Section */}
-      <section className="flex-1 max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
-        {/* Contact Info */}
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-          <p className="text-gray-600 mb-6">
-            Have questions about our products, your order, or need support? 
-            We’d love to hear from you! Reach us through the form or details below.
-          </p>
-
-          <div className="space-y-4">
-            <p className="flex items-center">
-              📍 <span className="ml-2">123 Apple Street, Cupertino, CA</span>
-            </p>
-            <p className="flex items-center">
-              📞 <span className="ml-2">+1 (800) 123-4567</span>
-            </p>
-            <p className="flex items-center">
-              ✉️ <span className="ml-2">support@istore.com</span>
-            </p>
-          </div>
-        </div>
-
+      {/* Main Content */}
+      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
         {/* Contact Form */}
         <div className="bg-white shadow-lg rounded-lg p-8">
-          <form className="space-y-6">
+          <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+          <form className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700">Name</label>
+              <label className="block text-gray-700 font-medium mb-2">Name</label>
               <input
                 type="text"
-                placeholder="Your Name"
-                className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="Your full name"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
             </div>
-
             <div>
-              <label className="block text-sm font-medium text-gray-700">Email</label>
+              <label className="block text-gray-700 font-medium mb-2">Email</label>
               <input
                 type="email"
-                placeholder="Your Email"
-                className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="you@example.com"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
             </div>
-
             <div>
-              <label className="block text-sm font-medium text-gray-700">Message</label>
+              <label className="block text-gray-700 font-medium mb-2">Message</label>
               <textarea
-                rows="4"
-                placeholder="Your Message"
-                className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                rows="5"
+                placeholder="How can we help you?"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
               ></textarea>
             </div>
-
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg shadow hover:bg-blue-700 transition"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
             >
               Send Message
             </button>
           </form>
         </div>
-      </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-6">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <p>&copy; 2025 iStore. All rights reserved.</p>
+        {/* Contact Info */}
+        <div className="space-y-8">
+          <div className="bg-white shadow-lg rounded-lg p-8">
+            <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+            <p className="mb-4 text-gray-600">
+              Reach out to us through any of the methods below. Our support team
+              will get back to you as soon as possible.
+            </p>
+            <ul className="space-y-4 text-gray-700">
+              <li>
+                📍 <span className="font-medium">Address:</span> 123 Tech Street,
+                Phnom Penh, Cambodia
+              </li>
+              <li>
+                📞 <span className="font-medium">Phone:</span> +855 123 456 789
+              </li>
+              <li>
+                📧 <span className="font-medium">Email:</span> support@techshop.com
+              </li>
+            </ul>
+          </div>
+
+          {/* Google Map Embed */}
+          <div className="overflow-hidden rounded-lg shadow-lg">
+            <iframe
+              title="Our Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251843.18708479446!2d104.67764365913189!3d11.579670741420272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513b9946bdfd%3A0x9fc828434b6eb9cf!2sPhnom%20Penh!5e0!3m2!1sen!2skh!4v1696600067935!5m2!1sen!2skh"
+              width="100%"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
-      </footer>
-    </div>
+      </section>
 </div>
   )
 }
