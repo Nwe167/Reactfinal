@@ -2,11 +2,11 @@
 
 
 :root {
-  --bg-theme: #312e2e;
-  --text-theme: #070707;
+  --bg-theme: #000000;
+  --text-theme: #000000;
 }
 
-.dark-theme {
+.dark {
   --bg-theme: #1446ce;
   --text-theme: #55c03f;
 }

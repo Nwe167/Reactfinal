@@ -5,7 +5,7 @@ const contect = () => {
     
  <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <section className="bg-black text-white py-16 text-center">
+      <section className="bg-red-500 text-white py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto">
           Have questions about our products or need support? We're here to help.

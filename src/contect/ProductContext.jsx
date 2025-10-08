@@ -7,23 +7,23 @@ export const ProductProvider = ({ children }) => {
     () => localStorage.getItem("theme") || "light"
   );
 
-  const toggleTheme = () => {
+  const toggle = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
-
+ 
   useEffect(() => {
     localStorage.setItem("theme", theme);
 
-    document.documentElement.classList.remove("light", "dark-theme");
-    if (theme == "dark") {
-      document.documentElement.classList.add("dark-theme");
+    document.documentElement.classList.remove("light", "dark");
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.add("light");
     }
   }, [theme]);
 
   return (
-    <ProductContext.Provider value={{ theme, toggleTheme }}>
+    <ProductContext.Provider value={{ theme, toggle }}>
       {children}
     </ProductContext.Provider>
   );

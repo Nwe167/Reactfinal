@@ -5,12 +5,7 @@ import { MdDarkMode } from "react-icons/md";
 import { IoSunny } from "react-icons/io5";
 
 const Navbar = () => {
-  const [theme, setTheme] = useState("light");
-
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
-
+  const [theme, toggle] = useState(ProductContext);
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -66,7 +61,7 @@ const Navbar = () => {
               <Link to="/contect">Contact</Link>
             </li>
             <li>
-              <button onClick={toggleTheme}>
+              <button onClick={toggle}>
                 {theme === "light" ? <MdDarkMode /> : <IoSunny />}
               </button>
             </li>
